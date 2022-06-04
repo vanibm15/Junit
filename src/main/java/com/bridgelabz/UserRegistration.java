@@ -23,16 +23,28 @@ public class UserRegistration {
     }
 
     public static final String EMAIL_PATTERN = "^([a-z]{3}[.][a-z]{3}@[a-z]{2}[.][a-z]{2}[.][a-z]{2})$";
+
     public boolean validateEmailId(String emailId) {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher matcher = pattern.matcher(emailId);
         return matcher.matches();
     }
-    public static final String MOBILE_PATTERN ="^[0-9]{2}\\s[0-9]{10}$";
+
+    public static final String MOBILE_PATTERN = "^[0-9]{2}\\s[0-9]{10}$";
+
     public boolean validateMobileNumber(String MobileNumber) {
         Pattern pattern = Pattern.compile(MOBILE_PATTERN);
         Matcher matcher = pattern.matcher(MobileNumber);
         return matcher.matches();
     }
-}
 
+    public static final String RULE1_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&]).{8,}$";
+
+    public boolean validateRule1(String Rule1Pattern) {
+        Pattern pattern = Pattern.compile(RULE1_PATTERN);
+        Matcher matcher = pattern.matcher(Rule1Pattern);
+        return matcher.matches();
+
+
+    }
+}

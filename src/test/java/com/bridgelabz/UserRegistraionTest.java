@@ -35,4 +35,12 @@ class UserRegistraionTest {
         Assertions.assertTrue(result);
 
     }
+
+    @Test
+    public void givenRule1_Minimumcharacter_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateRule1("Vani@123");
+        Assertions.assertTrue(result);
+
+    }
 }
