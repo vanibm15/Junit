@@ -9,9 +9,20 @@ import java.util.regex.Pattern;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
 class UserRegistraionTest {
+
+    @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateFirstName("Vani");
         Assertions.assertTrue(result);
     }
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateLastName("Shree");
+        Assertions.assertTrue(result);
+    }
+
+
+
 }
