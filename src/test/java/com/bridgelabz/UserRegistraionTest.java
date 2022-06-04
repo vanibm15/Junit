@@ -22,7 +22,12 @@ class UserRegistraionTest {
         boolean result = userRegistration.validateLastName("Shree");
         Assertions.assertTrue(result);
     }
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateEmailId("abc.xyz@bl.co.in");
+        Assertions.assertTrue(result);
 
-
+    }
 
 }

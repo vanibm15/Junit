@@ -21,5 +21,12 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(lastName);
         return matcher.matches();
     }
+
+    private static final String EMAIL_PATTERN = "^([a-z]{3}[.][a-z]{3}@[a-z]{2}[.][a-z]{2}[.][a-z]{2})$";
+    public boolean validateEmailId(String emailId) {
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(emailId);
+        return matcher.matches();
+    }
 }
 
