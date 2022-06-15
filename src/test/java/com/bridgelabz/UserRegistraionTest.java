@@ -16,18 +16,21 @@ class UserRegistraionTest {
         boolean result = userRegistration.validateFirstName("Vani");
         Assertions.assertTrue(result);
     }
+
     @Test
     public void givenLastName_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateLastName("Shree");
         Assertions.assertTrue(result);
     }
+
     @Test
     public void givenEmailId_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateEmailId("abc.xyz@bl.co.in");
         Assertions.assertTrue(result);
     }
+
     @Test
     public void givenMobileNumber_WhenProper_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
@@ -40,6 +43,14 @@ class UserRegistraionTest {
     public void givenRule1_Minimumcharacter_ShouldReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.validateRule1("Vani@123");
+        Assertions.assertTrue(result);
+
+    }
+
+    @Test
+    public void givenRule2_Minimumcharacter_ShouldReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.validateRule2("Vani@123");
         Assertions.assertTrue(result);
 
     }

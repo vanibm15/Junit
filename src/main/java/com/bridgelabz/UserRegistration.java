@@ -47,4 +47,12 @@ public class UserRegistration {
 
 
     }
+
+    public static final String RULE2_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]){1,}(?=.*[*.!@$%^&]).{8,}$";
+
+    public boolean validateRule2(String Rule2Pattern) {
+        Pattern pattern = Pattern.compile(RULE1_PATTERN);
+        Matcher matcher = pattern.matcher(Rule2Pattern);
+        return matcher.matches();
+    }
 }
