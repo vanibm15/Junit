@@ -4,7 +4,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-
     Pattern pattern;
     Matcher matcher;
     public static final String NAME_PATTERN = "^[A-Z][a-z]{2,}$";
